@@ -29,9 +29,31 @@ function showWeekContent(week) {
             <embed src="fpdf/Instalación lenguaje dart.pdf" width="600" height="400" type="application/pdf">
         `;
     
+    } else if (week === 3) {
+        weekDetails.innerHTML = `
+            <p>Semana 03:</p>
+            <button onclick="previewCode('tareas/semana3/proyecto01.dart')">Ver Proyecto 01</button>
+            <button onclick="previewCode('tareas/semana3/proyecto02.dart')">Ver Proyecto 02</button>
+            <button onclick="previewCode('tareas/semana3/proyecto03.dart')">Ver Proyecto 03</button>
+            <br><br>
+            <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana3" class="pdf-link" target="_blank">Ver en GitHub</a>
+            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+        `;
+
     }else {
         weekDetails.innerHTML = `<p>Contenido para la Semana ${week}</p>`;
     }
 
     weekSection.classList.remove('hidden');
+}
+
+function previewCode(filePath) {
+    fetch(filePath)
+        .then(response => response.text())
+        .then(text => {
+            const codePreview = document.getElementById('code-preview');
+            codePreview.textContent = text;
+            codePreview.style.display = 'block';
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
 }
