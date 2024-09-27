@@ -17,9 +17,9 @@ function showWeekContent(week) {
 
     if (week === 1) {
         weekDetails.innerHTML = `
-            <p>Tareas para la Semana 01:</p>
-            <a href="documentacion.pdf" class="pdf-link" target="_blank">Ver documentación (PDF)</a>
-            <embed src="documentacion.pdf" width="600" height="400" type="application/pdf">
+            <p>Fundamentos de Apps Móviles:</p>
+            <a href="fpdf/Fundamentos de Apps Móviles.pdf" class="pdf-link" target="_blank">Ver documentación (PDF)</a>
+            <embed src="fpdf/Fundamentos de Apps Móviles.pdf" width="600" height="400" type="application/pdf">
         `;
     } else {
         weekDetails.innerHTML = `<p>Contenido para la Semana ${week}</p>`;
