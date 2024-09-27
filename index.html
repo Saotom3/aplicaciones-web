@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showContent('inicio')">Inicio</a></li>
+                <li><a href="#" onclick="showContent('proyectos')">Proyectos</a></li>
+                <li class="dropdown">
+                    <a href="#">Programación Móvil</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#" onclick="showWeekContent(1)">Semana01</a></li>
+                        <li><a href="#" onclick="showWeekContent(2)">Semana02</a></li>
+                        <li><a href="#" onclick="showWeekContent(3)">Semana03</a></li>
+                        <li><a href="#" onclick="showWeekContent(4)">Semana04</a></li>
+                        <li><a href="#" onclick="showWeekContent(5)">Semana05</a></li>
+                        <li><a href="#" onclick="showWeekContent(6)">Semana06</a></li>
+                        <li><a href="#" onclick="showWeekContent(7)">Semana07</a></li>
+                        <li><a href="#" onclick="showWeekContent(8)">Semana08</a></li>
+                        <li><a href="#" onclick="showWeekContent(9)">Semana09</a></li>
+                        <li><a href="#" onclick="showWeekContent(10)">Semana10</a></li>
+                        <li><a href="#" onclick="showWeekContent(11)">Semana11</a></li>
+                        <li><a href="#" onclick="showWeekContent(12)">Semana12</a></li>
+                        <li><a href="#" onclick="showWeekContent(13)">Semana13</a></li>
+                        <li><a href="#" onclick="showWeekContent(14)">Semana14</a></li>
+                        <li><a href="#" onclick="showWeekContent(15)">Semana15</a></li>
+                        <li><a href="#" onclick="showWeekContent(16)">Semana16</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <section id="inicio">
+            <h1>Home</h1>
+        </section>
+        <section id="proyectos" class="hidden">
+            <h1>Proyectos</h1>
+        </section>
+        <section id="week-content" class="hidden">
+            <h1 id="week-title">Semana</h1>
+            <div id="week-details"></div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
