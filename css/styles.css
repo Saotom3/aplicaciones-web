@@ -75,6 +75,39 @@ main {
     text-align: center;
 }
 
+button {
+    background-color: #6200ea;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #9b51e0;
+    transform: translateY(-3px);
+}
+
+#code-preview {
+    background-color: #222;
+    color: #e0e0e0;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    display: none;
+    max-height: 400px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
 .hidden {
     display: none;
 }
@@ -92,7 +125,18 @@ h1 {
 a.pdf-link {
     color: #6200ea;
     text-decoration: none;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    display: inline-block;
     transition: color 0.3s ease;
+}
+
+#week-details {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a.pdf-link:hover {

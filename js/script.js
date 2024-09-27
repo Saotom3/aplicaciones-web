@@ -31,7 +31,7 @@ function showWeekContent(week) {
     
     } else if (week === 3) {
         weekDetails.innerHTML = `
-            <p>Semana 03:</p>
+            <p>Lenguaje Dart:</p>
             <button onclick="previewCode('tareas/semana3/proyecto01.dart')">Ver Proyecto 01</button>
             <button onclick="previewCode('tareas/semana3/proyecto02.dart')">Ver Proyecto 02</button>
             <button onclick="previewCode('tareas/semana3/proyecto03.dart')">Ver Proyecto 03</button>
