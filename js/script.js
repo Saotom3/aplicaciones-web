@@ -24,7 +24,7 @@ function showWeekContent(week) {
 
     } else if (week === 2) {
         weekDetails.innerHTML = `
-            <p>Instalación lenguaje dart:</p>
+            <p>Instalación Lenguaje Dart:</p>
             <a href="fpdf/Instalación lenguaje dart.pdf" class="pdf-link" target="_blank">Ver (PDF)</a>
             <embed src="fpdf/Instalación lenguaje dart.pdf" width="600" height="400" type="application/pdf">
         `;
