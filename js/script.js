@@ -51,6 +51,35 @@ function showWeekContent(week) {
             <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
         `;
 
+    } else if (week === 5) {
+        weekDetails.innerHTML = `
+            <p>Lenguaje Dart Semana05:</p>
+            <button onclick="previewCode('tareas/semana5/ejercicio01.dart')">Ver Enunciado 01</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio02.dart')">Ver Enunciado 02</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio03.dart')">Ver Enunciado 03</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio04.dart')">Ver Enunciado 04</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio05.dart')">Ver Enunciado 05</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio06.dart')">Ver Enunciado 06</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio07.dart')">Ver Enunciado 07</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio08.dart')">Ver Enunciado 08</button>
+            <button onclick="previewCode('tareas/semana5/ejercicio09.dart')">Ver Enunciado 09</button>
+            <br><br>
+            <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana5" class="pdf-link" target="_blank">Ver en GitHub</a>
+            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+        `;
+    
+    } else if (week === 6) {
+        weekDetails.innerHTML = `
+            <p>Lenguaje Dart Semana06:</p>
+            <button onclick="previewCode('tareas/semana6/enunciado01.dart')">Ver Enunciado 01</button>
+            <button onclick="previewCode('tareas/semana6/enunciado02.dart')">Ver Enunciado 02</button>
+            <button onclick="previewCode('tareas/semana6/enunciado03.dart')">Ver Enunciado 03</button>
+            <button onclick="previewCode('tareas/semana6/enunciado04.dart')">Ver Enunciado 04</button>
+            <br><br>
+            <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana6" class="pdf-link" target="_blank">Ver en GitHub</a>
+            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+        `;
+    
     } else {
         weekDetails.innerHTML = `<p>Contenido para la Semana ${week}</p>`;
     }
