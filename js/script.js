@@ -80,6 +80,17 @@ function showWeekContent(week) {
             <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
         `;
     
+    } else if (week === 6) {
+        weekDetails.innerHTML = `
+            <p>Lenguaje Dart Semana07:</p>
+            <button onclick="previewCode('tareas/semana7-1de2/enunciado01.dart')">Ver Enunciado 01</button>
+            <button onclick="previewCode('tareas/semana7-1de2/enunciado02.dart')">Ver Enunciado 02</button>
+            <button onclick="previewCode('tareas/semana7-1de2/enunciado03.dart')">Ver Enunciado 03</button>
+            <br><br>
+            <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7-1de2" class="pdf-link" target="_blank">Ver en GitHub</a>
+            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+        `;
+    
     } else {
         weekDetails.innerHTML = `<p>Contenido para la Semana ${week}</p>`;
     }
