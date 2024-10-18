@@ -80,7 +80,7 @@ function showWeekContent(week) {
             <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
         `;
     
-    } else if (week === 6) {
+    } else if (week === 7) {
         weekDetails.innerHTML = `
             <p>Lenguaje Dart Semana07:</p>
             <button onclick="previewCode('tareas/semana7-1de2/enunciado01.dart')">Ver Enunciado 01</button>
