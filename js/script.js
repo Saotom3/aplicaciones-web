@@ -123,6 +123,7 @@ lib/
             <button onclick="previewCode('tareas/semana8/utils/calculations.dart')">Ver calculations.dart</button>
             <br><br>
             <a href="drive" class="" target="_blank">Ver Proyecto</a>
+            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
         `;
     
     }else {
