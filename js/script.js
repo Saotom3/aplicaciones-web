@@ -103,7 +103,29 @@ function showWeekContent(week) {
             <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
         `;
     
-    } else {
+    } else if (week === 8) {
+        weekDetails.innerHTML = `
+            <h2>Semana 8 Proyecto2</h2>
+            <pre>
+lib/
+├── main.dart
+├── screens/
+│   ├── area_screen.dart
+│   ├── login_screen.dart
+│   └── menu_screen.dart
+└── utils/
+    └── calculations.dart
+            </pre>
+            <button onclick="previewCode('tareas/semana8/main.dart')">Ver main.dart</button>
+            <button onclick="previewCode('tareas/semana8/screens/area_screen.dart')">Ver area_screen.dart</button>
+            <button onclick="previewCode('tareas/semana8/screens/login_screen.dart')">Ver login_screen.dart</button>
+            <button onclick="previewCode('tareas/semana8/screens/menu_screen.dart')">Ver menu_screen.dart</button>
+            <button onclick="previewCode('tareas/semana8/utils/calculations.dart')">Ver calculations.dart</button>
+            <br><br>
+            <a href="drive" class="" target="_blank">Ver Proyecto</a>
+        `;
+    
+    }else {
         weekDetails.innerHTML = `<p>Contenido para la Semana ${week}</p>`;
     }
 
