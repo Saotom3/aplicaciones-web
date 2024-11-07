@@ -8,6 +8,12 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #111;
     color: #fff;
+    display: flex;           
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -70,7 +76,8 @@ nav ul li a:hover {
 }
 
 main {
-    width: 75%;
+    width: 75%;             
+    max-width: 1200px;      
     margin: 2rem auto;
     text-align: center;
 }
@@ -101,10 +108,10 @@ button:hover {
     text-align: left;
     font-family: monospace;
     font-size: 0.9rem;
-    overflow-x: auto;
-    white-space: pre-wrap;
-    display: none;
-    max-height: 400px;
+    overflow-x: auto;       
+    white-space: pre-wrap;  
+    display: block;         
+    width: 100%;            
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
