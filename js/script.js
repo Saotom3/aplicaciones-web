@@ -99,7 +99,7 @@ function showWeekContent(week) {
                         <button onclick="previewCode('tareas/semana7/along/enunciado02.dart')">Ver Enunciado 02</button>
                         <button onclick="previewCode('tareas/semana7/along/enunciado03.dart')">Ver Enunciado 03</button>
                         <br><br>
-                        <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7-1de2" class="pdf-link" target="_blank">Ver en GitHub</a>
+                        <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7" class="pdf-link" target="_blank">Ver en GitHub</a>
                     </div>
                     <div style="margin-top: 20px;">
                         <h3>Proyecto 2: Enunciados 1-4</h3>
@@ -108,7 +108,7 @@ function showWeekContent(week) {
                         <button onclick="previewCode('tareas/semana7/after/enunciado03.dart')">Ver Enunciado 03</button>
                         <button onclick="previewCode('tareas/semana7/after/enunciado04.dart')">Ver Enunciado 04</button>
                         <br><br>
-                        <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7-2de2" class="pdf-link" target="_blank">Ver en GitHub</a>
+                        <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7" class="pdf-link" target="_blank">Ver en GitHub</a>
                     </div>
                 </div>
                 <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
