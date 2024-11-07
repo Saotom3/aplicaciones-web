@@ -1,3 +1,9 @@
+/*
+Ejercicio 5: Suma de matrices NxN
+Escribe un programa que solicite dos matrices de tamaño N x N (donde N es
+proporcionado por el usuario) y luego realice la suma de las dos matrices 
+utilizando bucles anidados for.
+*/
 import 'dart:io';
 
 void main() {
