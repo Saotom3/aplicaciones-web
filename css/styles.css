@@ -139,6 +139,26 @@ a.pdf-link {
     align-items: center;
 }
 
+/* semana8 */
+
+.accordion-content {
+    padding-left: 20px; /* Espaciado a la izquierda */
+}
+
+.folder {
+    cursor: pointer;
+    color: rgb(200, 222, 74);
+}
+
+.file {
+    padding-left: 20px; /* Indentación para archivos */
+    cursor: pointer;
+}
+
+.hidden {
+    display: none; /* Oculta elementos con esta clase */
+}
+
 a.pdf-link:hover {
     color: #9b51e0;
 }
