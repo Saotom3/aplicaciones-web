@@ -1,3 +1,18 @@
+/*
+Una tienda ha puesto en oferta la venta de camisas ofreciendo un descuento, por temporada 
+de verano, denominado 7% + 7%. Los cálculos se efectúan de la siguiente manera:
+• El importe de la compra es igual al producto del precio de la camisa por la cantidad
+de unidades adquiridas.
+• El importe del primer descuento es igual al 7% del importe de la compra.
+• El importe del segundo descuento es igual al 7% de lo que queda de restar el importe
+de la compra menos el importe del primer descuento.
+• El importe del descuento total es igual a la suma de los dos descuentos anteriores.
+• El importe a pagar es igual al importe de la compra menos el importe del descuento
+total.
+Dado el precio del producto y la cantidad de unidades adquiridas, diseñe un programa que
+determine el importe de la compra, el importe del primer descuento, el importe del segundo
+descuento, el importe del descuento total y el importe a pagar.
+*/
 import 'dart:io';
 
 class TiendaCamisas {
