@@ -1,3 +1,9 @@
+/*
+Ejercicio 1: Sumatoria de números primos en un rango
+Escribe un programa que solicite dos números y calcule la sumatoria de los 
+númerosprimos que existen entre esos dos valores. Utiliza un bucle for o while 
+para recorrer los números en el rango y verifica si son primos.
+*/
 import 'dart:io';
 
 bool esPrimo(int num) {
