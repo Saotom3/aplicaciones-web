@@ -32,72 +32,72 @@ function showWeekContent(week) {
         `;
     
     } else if (week === 3) {
-        weekDetails.innerHTML = `
-            <p>Lenguaje Dart Semana03:</p>
-            <div>
+    weekDetails.innerHTML = `
+        <p>Lenguaje Dart Semana03:</p>
+        <div>
             <button onclick="previewCode('tareas/semana3/proyecto01.dart')">Ver Enunciado 01</button>
             <button onclick="previewCode('tareas/semana3/proyecto02.dart')">Ver Enunciado 02</button>
             <button onclick="previewCode('tareas/semana3/proyecto03.dart')">Ver Enunciado 03</button>
-            </div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana3" class="pdf-link" target="_blank">Ver en GitHub</a>
             <div id="code-preview-container">
                 <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
             </div>
-        `;
-
+        </div>
+    `;
+        
     } else if (week === 4) {
-        weekDetails.innerHTML = `
-            <p>Lenguaje Dart Semana04:</p>
-            <div>
+    weekDetails.innerHTML = `
+        <p>Lenguaje Dart Semana04:</p>
+        <div>
             <button onclick="previewCode('tareas/semana4/enunciado01.dart')">Ver Enunciado 01</button>
             <button onclick="previewCode('tareas/semana4/enunciado02.dart')">Ver Enunciado 02</button>
             <button onclick="previewCode('tareas/semana4/enunciado03.dart')">Ver Enunciado 03</button>
-            </div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana4" class="pdf-link" target="_blank">Ver en GitHub</a>
             <div id="code-preview-container">
                 <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
             </div>
-        `;
+        </div>
+    `;
         
     } else if (week === 5) {
-        weekDetails.innerHTML = `
-            <p>Lenguaje Dart Semana 05:</p>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio01.dart')">Ver Enunciado 01</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio02.dart')">Ver Enunciado 02</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio03.dart')">Ver Enunciado 03</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio04.dart')">Ver Enunciado 04</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio05.dart')">Ver Enunciado 05</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio06.dart')">Ver Enunciado 06</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio07.dart')">Ver Enunciado 07</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio08.dart')">Ver Enunciado 08</button>
-                <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio09.dart')">Ver Enunciado 09</button>
-            </div>
-            <br>
-            <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana5" class="pdf-link" target="_blank">Ver en GitHub</a>
-            <div id="code-preview-container">
-                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
-            </div>
-        `;
+    weekDetails.innerHTML = `
+        <p>Lenguaje Dart Semana 05:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio01.dart')">Ver Enunciado 01</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio02.dart')">Ver Enunciado 02</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio03.dart')">Ver Enunciado 03</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio04.dart')">Ver Enunciado 04</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio05.dart')">Ver Enunciado 05</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio06.dart')">Ver Enunciado 06</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio07.dart')">Ver Enunciado 07</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio08.dart')">Ver Enunciado 08</button>
+            <button style="flex: 0 1 30%; max-width: 150px;" onclick="previewCode('tareas/semana5/ejercicio09.dart')">Ver Enunciado 09</button>
+        </div>
+        <br>
+        <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana5" class="pdf-link" target="_blank">Ver en GitHub</a>
+        <div id="code-preview-container">
+            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+        </div>
+    `;
         
     } else if (week === 6) {
-        weekDetails.innerHTML = `
-            <p>Lenguaje Dart Semana06:</p>
-            <div>
+    weekDetails.innerHTML = `
+        <p>Lenguaje Dart Semana06:</p>
+        <div>
             <button onclick="previewCode('tareas/semana6/enunciado01.dart')">Ver Enunciado 01</button>
             <button onclick="previewCode('tareas/semana6/enunciado02.dart')">Ver Enunciado 02</button>
             <button onclick="previewCode('tareas/semana6/enunciado03.dart')">Ver Enunciado 03</button>
             <button onclick="previewCode('tareas/semana6/enunciado04.dart')">Ver Enunciado 04</button>
-            </div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana6" class="pdf-link" target="_blank">Ver en GitHub</a>
             <div id="code-preview-container">
                 <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
             </div>
-        `;
-        
+        </div>
+    `;
+
     } else if (week === 7) {
     weekDetails.innerHTML = `
         <div>
@@ -141,13 +141,13 @@ function showWeekContent(week) {
                             <span class="folder-icon">📁</span> lib/
                         </div>
                         <div id="lib-folder1" class="hidden">
-                            <div class="file" onclick="previewCode('tareas/semana8/proyecto1/main.dart')">main.dart</div>
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto1/main.dart')">📄 main.dart</div>
                             <div class="folder" onclick="toggleFolder('screens-folder1')">
                                 <span class="folder-icon">📁</span> screens/
                             </div>
                             <div id="screens-folder1" class="hidden">
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/splash_screen.dart')">splash_screen.dart</div>
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/second_screen.dart')">second_screen.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/splash_screen.dart')">📄 splash_screen.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/second_screen.dart')">📄 second_screen.dart</div>
                             </div>
                         </div>
                     </div>
@@ -161,20 +161,20 @@ function showWeekContent(week) {
                             <span class="folder-icon">📁</span> lib/
                         </div>
                         <div id="lib-folder2" class="hidden">
-                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/main.dart')">main.dart</div>
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/main.dart')">📄 main.dart</div>
                             <div class="folder" onclick="toggleFolder('screens-folder2')">
                                 <span class="folder-icon">📁</span> screens/
                             </div>
                             <div id="screens-folder2" class="hidden">
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/area_screen.dart')">area_screen.dart</div>
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/login_screen.dart')">login_screen.dart</div>
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/menu_screen.dart')">menu_screen.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/area_screen.dart')">📄 area_screen.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/login_screen.dart')">📄 login_screen.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/menu_screen.dart')">📄 menu_screen.dart</div>
                             </div>
                             <div class="folder" onclick="toggleFolder('utils-folder2')">
                                 <span class="folder-icon">📁</span> utils/
                             </div>
                             <div id="utils-folder2" class="hidden">
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/calculations.dart')">calculations.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/calculations.dart')">📄 calculations.dart</div>
                             </div>
                         </div>
                     </div>
