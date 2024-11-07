@@ -1,3 +1,9 @@
+/*
+Ejercicio 3: Factorial de números grandes
+Escribe un programa que calcule el factorial de un número grande (por ejemplo, 100)
+utilizando estructuras repetitivas y el tipo de datos BigInteger para manejar 
+grandes números.
+*/
 import 'dart:io';
 
 BigInt factorial(BigInt n) {
