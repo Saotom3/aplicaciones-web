@@ -101,10 +101,11 @@ function showWeekContent(week) {
     } else if (week === 7) {
     weekDetails.innerHTML = `
         <div>
-            <h2>Lenguaje Dart Semana 07:</h2>
+           <h4 style="text-align: center;">Lenguaje Dart Semana 07:</h4>
             <div style="display: flex; justify-content: space-between; gap: 20px;">
                 <div style="width: 45%;">
-                    <h3>Proyecto 1: Enunciados 1-3</h3>
+                    <p>Proyecto 1: Enunciados 1-3</p>
+                    <br>
                     <button onclick="previewCode('tareas/semana7/along/enunciado01.dart')">Ver Enunciado 01</button>
                     <button onclick="previewCode('tareas/semana7/along/enunciado02.dart')">Ver Enunciado 02</button>
                     <button onclick="previewCode('tareas/semana7/along/enunciado03.dart')">Ver Enunciado 03</button>
@@ -113,7 +114,8 @@ function showWeekContent(week) {
                 </div>
 
                 <div style="width: 45%;">
-                    <h3>Proyecto 2: Enunciados 1-4</h3>
+                    <p>Proyecto 2: Enunciados 1-4</p>
+                    <br>
                     <button onclick="previewCode('tareas/semana7/after/enunciado01.dart')">Ver Enunciado 01</button>
                     <button onclick="previewCode('tareas/semana7/after/enunciado02.dart')">Ver Enunciado 02</button>
                     <button onclick="previewCode('tareas/semana7/after/enunciado03.dart')">Ver Enunciado 03</button>
