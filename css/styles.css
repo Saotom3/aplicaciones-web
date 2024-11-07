@@ -93,13 +93,15 @@ button:hover {
 }
 
 #code-preview-container {
-    width: 50%; /* Ancho del 45% */
-    margin: 0 auto; /* Centrado */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Para asegurar que todo se alinee */
-    margin-top: 20px;
+    width: 45%; /* Ancho del 45% */
+    margin: 0 auto; /* Centrado horizontal */
+    background-color: #222;
+    padding: 1rem;
+    color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow-x: auto;
+    display: block; /* Asegúrate de que esté en bloque */
 }
 
 #code-preview {
@@ -142,11 +144,23 @@ a.pdf-link {
 }
 
 #week-details {
-    margin-top: 20px;
-    font-size: 1.2rem;
+    width: 75%;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+#week-details > div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#week-details a.pdf-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* semana8 */
