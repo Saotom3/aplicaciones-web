@@ -93,7 +93,7 @@ button:hover {
 }
 
 #code-preview-container {
-    width: 45%; /* Ancho del 45% */
+    width: 40%; /* Ancho del 45% */
     margin: 0 auto; /* Centrado */
     display: flex;
     flex-direction: column;
