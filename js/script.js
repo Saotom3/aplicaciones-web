@@ -116,6 +116,7 @@ function showWeekContent(week) {
 
     } else if (week === 8) {
         weekDetails.innerHTML = `
+            <div>
             <div style="display: flex; justify-content: space-between;">
                 <div style="width: 45%;">
                 <h2 onclick="toggleAccordion('project1')" style="cursor: pointer;">📁Proyecto1</h2>
@@ -163,6 +164,7 @@ function showWeekContent(week) {
                 </div>
                 <a href="https://drive.google.com/file/d/1LyBajAliCaguhZhMX1abZZSmsJaxWWq8/view?usp=sharing" class="pdf-link" target="_blank">Ver en Drive</a>
             </div>
+            <div>
             <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
                 
         `; 
