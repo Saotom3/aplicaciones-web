@@ -1,3 +1,12 @@
+/*
+Una empresa paga a sus vendedores un sueldo bruto que se calcula sumando un sueldo básico
+más una comisión.
+El sueldo básico es S/. 350.75. La comisión es igual al 5% del importe total vendido en el mes.
+Por ley, todo empleado está sujeto a un descuento igual al 15% del sueldo bruto.
+El sueldo neto se calcula restando el sueldo bruto menos el importe del descuento. Dado el
+importe total vendido en el mes, diseñe un algoritmo que imprima la boleta de un vendedor
+indicando el sueldo básico, la comisión, el sueldo bruto, el descuento y el sueldo neto. 
+*/
 import 'dart:io';
 
 class Vendedor {
