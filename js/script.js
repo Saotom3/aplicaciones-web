@@ -127,6 +127,7 @@ function showWeekContent(week) {
     weekDetails.innerHTML = `
         <div>
             <h2>Lenguaje Dart Semana 08:</h2>
+            <br>
             <div style="display: flex; justify-content: space-between;">
                 <div style="width: 45%;">
                     <h3 onclick="toggleAccordion('project1')" style="cursor: pointer;">📁 Proyecto 1</h3>
