@@ -38,7 +38,7 @@ function showWeekContent(week) {
             <button onclick="previewCode('tareas/semana3/proyecto01.dart')">Ver Enunciado 01</button>
             <button onclick="previewCode('tareas/semana3/proyecto02.dart')">Ver Enunciado 02</button>
             <button onclick="previewCode('tareas/semana3/proyecto03.dart')">Ver Enunciado 03</button>
-            <div>
+            </div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana3" class="pdf-link" target="_blank">Ver en GitHub</a>
             <div id="code-preview-container">
@@ -53,7 +53,7 @@ function showWeekContent(week) {
             <button onclick="previewCode('tareas/semana4/enunciado01.dart')">Ver Enunciado 01</button>
             <button onclick="previewCode('tareas/semana4/enunciado02.dart')">Ver Enunciado 02</button>
             <button onclick="previewCode('tareas/semana4/enunciado03.dart')">Ver Enunciado 03</button>
-            <div>
+            </div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana4" class="pdf-link" target="_blank">Ver en GitHub</a>
             <div id="code-preview-container">
@@ -90,7 +90,7 @@ function showWeekContent(week) {
             <button onclick="previewCode('tareas/semana6/enunciado02.dart')">Ver Enunciado 02</button>
             <button onclick="previewCode('tareas/semana6/enunciado03.dart')">Ver Enunciado 03</button>
             <button onclick="previewCode('tareas/semana6/enunciado04.dart')">Ver Enunciado 04</button>
-            <div>
+            </div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana6" class="pdf-link" target="_blank">Ver en GitHub</a>
             <div id="code-preview-container">
@@ -177,7 +177,9 @@ function showWeekContent(week) {
                 </div>
             </div>
             <br>
-            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            <div id="code-preview-container">
+                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            </div>
         </div>
     `;
 } else {
