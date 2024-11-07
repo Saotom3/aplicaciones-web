@@ -1,65 +1,60 @@
+/*
+En una universidad, los alumnos están clasificados en cuatro categorías. A cada categoría le
+corresponde una pensión mensual distinta dada en la siguiente tabla:
+Categoría Pensión
+A S/. 550
+B S/. 500
+C S/. 460
+D S/. 400
+Semestralmente, la universidad efectúa rebajas en las pensiones de sus estudiantes a partir del
+segundo ciclo basándose en el promedio ponderado del ciclo anterior en porcentajes dados en
+la tabla siguiente:
+Promedio Descuento
+0 a 13.99 No hay descuento
+14.00 a 15.99 10 %
+16.00 a 17.99 12 %
+18.00 a 20.00 15 %
+Dado el promedio ponderado y la categoría de un estudiante, diseñe un programa que determine
+cuánto de rebaja recibirá sobre su pensión actual y a cuánto asciende su nueva pensión.
+*/
 import 'dart:io';
 
-class Vendedor {
-  double sueldoBasico = 350.75;
-  double totalVendido;
+void main(List<String> arguments) {
+  List<String> categorias = ['A', 'B', 'C', 'D'];
+  List<int> precios = [550, 500, 460, 400];
 
-  // Constructor
-  Vendedor(this.totalVendido);
+  print("Ingrese su Categoría (A, B, C, D):");
+  stdout.write('Introduce tu Categoría: ');
+  String categoriaString = stdin.readLineSync()?.toUpperCase() ?? '';
 
-  // Método para calcular la comisión
-  double calcularComision() {
-    return totalVendido * 0.05; // 5% del importe total vendido
-  }
+  stdout.write('Introduce tu Nota: ');
+  String notaString = stdin.readLineSync() ?? '';
+  double nota = double.tryParse(notaString) ?? 0;
 
-  // Método para calcular el sueldo bruto
-  double calcularSueldoBruto() {
-    return sueldoBasico + calcularComision();
-  }
+  // Evaluar la categoría y calcular el resultado
+  double resultado = evaluar(categoriaString, nota, categorias, precios);
 
-  // Método para calcular el descuento
-  double calcularDescuento() {
-    return calcularSueldoBruto() * 0.15; // 15% del sueldo bruto
-  }
-
-  // Método para calcular el sueldo neto
-  double calcularSueldoNeto() {
-    return calcularSueldoBruto() - calcularDescuento();
-  }
-
-  // Método para imprimir la boleta
-  void imprimirBoleta() {
-    print('Boleta de Pago del Vendedor');
-    print('---------------------------');
-    print('Sueldo Básico: S/. $sueldoBasico');
-    print('Comisión: S/. ${calcularComision().toStringAsFixed(2)}');
-    print('Sueldo Bruto: S/. ${calcularSueldoBruto().toStringAsFixed(2)}');
-    print('Descuento (15%): S/. ${calcularDescuento().toStringAsFixed(2)}');
-    print('Sueldo Neto: S/. ${calcularSueldoNeto().toStringAsFixed(2)}');
-    print('---------------------------');
+  if (resultado != -1) {
+    print('El monto a pagar es: \$${resultado.toStringAsFixed(2)}');
+  } else {
+    print('Categoría no reconocida.');
   }
 }
 
-void main() {
-  List<Vendedor> vendedores = [];
-  String continuar;
+double evaluar(String categoria, double nota, List<String> categorias, List<int> precios) {
+  int index = categorias.indexOf(categoria);
+  if (index == -1) {
+    return -1;
+  }
+  double precioBase = precios[index].toDouble();
 
-  do {
-    // Solicitar el total vendido en el mes
-    print('Ingrese el total vendido en el mes:');
-    double totalVendido = double.parse(stdin.readLineSync()!);
-
-    // Crear objeto de la clase Vendedor y agregarlo a la lista
-    Vendedor vendedor = Vendedor(totalVendido);
-    vendedores.add(vendedor);
-
-    // Preguntar si se desea agregar otro vendedor
-    print('¿Desea agregar otro vendedor? (s/n)');
-    continuar = stdin.readLineSync()!;
-  } while (continuar.toLowerCase() == 's');
-
-  // Imprimir la boleta de pago para cada vendedor
-  for (var vendedor in vendedores) {
-    vendedor.imprimirBoleta();
+  if (nota < 14) {
+    return precioBase;
+  } else if (nota < 16) {
+    return precioBase * 0.9;
+  } else if (nota < 18) {
+    return precioBase * 0.88;
+  } else {
+    return precioBase * 0.85;
   }
 }
