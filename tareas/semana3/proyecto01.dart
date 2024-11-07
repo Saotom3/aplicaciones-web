@@ -1,3 +1,8 @@
+/* 
+Diseñe un programa en Lenguaje Dart que determine el área total (A) y el volumen (V) 
+de un cilindro del que se conoce su radio (r) y su altura (h). Considere las siguientes 
+fórmulas: A = 2πr(r + h)  V = πr²h 
+*/
 import 'dart:io';  // Importa para permitir entrada del usuario
 import 'dart:math';  // Importa para usar el valor de pi y otras funciones matemáticas
 
