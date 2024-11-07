@@ -1,75 +1,86 @@
+/*
+Una dulcería vende chocolates a los precios dados en la siguiente tabla:
+Tipo de chocolate Precio unitario
+Primor S/. 8.5
+Dulzura S/. 10.0
+Tentación S/. 7.0
+Explosión S/. 12.5
+Como oferta, la tienda aplica un porcentaje de descuento sobre el importe de la compra,
+basándose en la cantidad de chocolates adquiridos, de acuerdo con la siguiente tabla:
+Cantidad de chocolates Descuento
+< 5 4.0%
+≥ 5 y < 10 6.5%
+≥ 10 y < 15 9.0%
+≥ 15 11.5%
+Adicionalmente, si el importe a pagar es no menor de S/. 250, la tienda obsequia 3 caramelos por
+cada chocolate; en caso contrario, obsequia 2 caramelos por cada chocolate.
+Dado el tipo de chocolate y la cantidad de unidades adquiridas, diseñe un programa que
+determine el importe de la compra, el importe del descuento, el importe a pagar y la cantidad de
+caramelos de obsequio.
+*/
 import 'dart:io';
 
-class TiendaCamisas {
-  double precio;
-  int cantidad;
+double obtenerPrecioChocolate(String tipoChocolate) {
+  Set<String> tiposChocolatesValidos = {'Primor', 'Dulzura', 'Tentación', 'Explosión'};
 
-  // Constructor
-  TiendaCamisas(this.precio, this.cantidad);
-
-  // Método para calcular el importe de la compra
-  double calcularImporteCompra() {
-    return precio * cantidad;
+  if (!tiposChocolatesValidos.contains(tipoChocolate)) {
+    return 0;
   }
 
-  // Método para calcular el primer descuento (7% del importe de la compra)
-  double calcularPrimerDescuento() {
-    return calcularImporteCompra() * 0.07;
-  }
+  Map<String, double> precios = {
+    'Primor': 8.5,
+    'Dulzura': 10.0,
+    'Tentación': 7.0,
+    'Explosión': 12.5,
+  };
 
-  // Método para calcular el segundo descuento (7% del importe restante)
-  double calcularSegundoDescuento() {
-    double importeRestante = calcularImporteCompra() - calcularPrimerDescuento();
-    return importeRestante * 0.07;
-  }
+  return precios[tipoChocolate] ?? 0;
+}
 
-  // Método para calcular el descuento total
-  double calcularDescuentoTotal() {
-    return calcularPrimerDescuento() + calcularSegundoDescuento();
+double obtenerDescuento(int cantidad) {
+  if (cantidad < 5) {
+    return 0.04;
+  } else if (cantidad < 10) {
+    return 0.065;
+  } else if (cantidad < 15) {
+    return 0.09;
+  } else {
+    return 0.115;
   }
+}
 
-  // Método para calcular el importe final a pagar
-  double calcularImportePagar() {
-    return calcularImporteCompra() - calcularDescuentoTotal();
-  }
-
-  // Método para imprimir el detalle de la compra
-  void imprimirDetalleCompra() {
-    print('Detalle de la Compra de Camisas');
-    print('------------------------------');
-    print('Importe de la compra: S/. ${calcularImporteCompra().toStringAsFixed(2)}');
-    print('Primer descuento (7%): S/. ${calcularPrimerDescuento().toStringAsFixed(2)}');
-    print('Segundo descuento (7%): S/. ${calcularSegundoDescuento().toStringAsFixed(2)}');
-    print('Descuento total: S/. ${calcularDescuentoTotal().toStringAsFixed(2)}');
-    print('Importe a pagar: S/. ${calcularImportePagar().toStringAsFixed(2)}');
-    print('------------------------------');
+int calcularCaramelos(int cantidadChocolates, double importeAPagar) {
+  if (importeAPagar >= 250) {
+    return cantidadChocolates * 3;
+  } else {
+    return cantidadChocolates * 2;
   }
 }
 
 void main() {
-  List<TiendaCamisas> compras = [];
-  String continuar;
+  print(
+      "Ingrese el tipo de chocolate (Primor, Dulzura, Tentación, Explosión):");
+  String tipoChocolate = stdin.readLineSync()!;
 
-  do {
-    // Solicitar el precio de la camisa
-    print('Ingrese el precio de la camisa:');
-    double precio = double.parse(stdin.readLineSync()!);
+  print("Ingrese la cantidad de chocolates:");
+  int cantidadChocolates = int.parse(stdin.readLineSync()!);
 
-    // Solicitar la cantidad de camisas
-    print('Ingrese la cantidad de camisas:');
-    int cantidad = int.parse(stdin.readLineSync()!);
+  double precioUnitario = obtenerPrecioChocolate(tipoChocolate);
 
-    // Crear objeto de la clase TiendaCamisas y agregarlo a la lista
-    TiendaCamisas tienda = TiendaCamisas(precio, cantidad);
-    compras.add(tienda);
-
-    // Preguntar si se desea agregar otra compra
-    print('¿Desea agregar otra compra? (s/n)');
-    continuar = stdin.readLineSync()!;
-  } while (continuar.toLowerCase() == 's');
-
-  // Imprimir el detalle de la compra para cada compra almacenada
-  for (var compra in compras) {
-    compra.imprimirDetalleCompra();
+  if (precioUnitario == 0) {
+    print("Tipo de chocolate inválido.");
+    return;
   }
+
+  double importeCompra = precioUnitario * cantidadChocolates;
+
+  double descuento = obtenerDescuento(cantidadChocolates);
+  double importeDescuento = importeCompra * descuento;
+  double importeAPagar = importeCompra - importeDescuento;
+  int caramelosObsequio = calcularCaramelos(cantidadChocolates, importeAPagar);
+
+  print("Importe de la compra: S/. ${importeCompra.toStringAsFixed(2)}");
+  print("Importe del descuento: S/. ${importeDescuento.toStringAsFixed(2)}");
+  print("Importe a pagar: S/. ${importeAPagar.toStringAsFixed(2)}");
+  print("Cantidad de caramelos de obsequio: $caramelosObsequio");
 }
