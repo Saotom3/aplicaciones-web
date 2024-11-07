@@ -1,50 +1,96 @@
+/*
+Una empresa evalúa a sus empleados bajo dos criterios: puntualidad y rendimiento. En cada caso,
+el empleado recibe un puntaje que va de 1 a 10, de acuerdo con los siguientes criterios:
+Puntaje por puntualidad: - está en función de los minutos de tardanza de acuerdo con la
+siguiente tabla:
+Minutos de tardanza Puntaje
+0 10
+1 a 2 8
+3 a 5 6
+6 a 9 4
+Mas de 9 0
+Puntaje por rendimiento: - está en función de la cantidad de observaciones efectuadas al
+empleado por no cumplir sus obligaciones de acuerdo con la siguiente tabla:
+Observaciones efectuadas Puntaje
+0 10
+1 8
+2 5
+3 1
+Mas de 3 0
+El puntaje total del empleado es la suma del puntaje por puntualidad más el puntaje por
+rendimiento. Basándose en el puntaje total, el empleado recibe una bonificación anual de acuerdo
+con la siguiente tabla:
+Puntaje total Bonificación
+Menos de 11 S/. 2.5 por punto
+11 a 13 S/. 5.0 por punto
+14 a 16 S/. 7.5 por punto
+17 a 19 S/. 10.0 por punto
+20 S/. 12.5 por punto
+Dados los minutos de tardanza y el número de observaciones de un empleado, diseñe un
+programa que determine el puntaje por puntualidad, el puntaje por rendimiento, el puntaje total
+y la bonificación que le corresponden
+*/
 import 'dart:io';
 
-class Feria {
-  double montoTotal;
+void main(List<String> arguments) {
+  print("Ingrese los minutos de tardanza del empleado:");
+  String minutosString = stdin.readLineSync() ?? '';
+  int minutos = int.parse(minutosString);
 
-  // Constructor
-  Feria(this.montoTotal);
+  print("Ingrese las observaciones del empleado:");
+  String observacionesString = stdin.readLineSync() ?? '';
+  int observaciones = int.parse(observacionesString);
 
-  // Método para calcular el gasto en cada rubro
-  double calcularGasto(double porcentaje) {
-    return montoTotal * (porcentaje / 100);
-  }
+  double bonificacionTotal = bonificacion(
+      puntosObservaciones(observaciones),
+      CalcularPuntajeMinutos(minutos));
 
-  // Método para imprimir los gastos detallados
-  void imprimirGastos() {
-    print('Gastos de la Empresa en la Feria');
-    print('-------------------------------');
-    print('Alquiler de espacio en la feria: S/. ${calcularGasto(23).toStringAsFixed(2)}');
-    print('Publicidad: S/. ${calcularGasto(7).toStringAsFixed(2)}');
-    print('Transporte: S/. ${calcularGasto(26).toStringAsFixed(2)}');
-    print('Servicios feriales: S/. ${calcularGasto(12).toStringAsFixed(2)}');
-    print('Decoración: S/. ${calcularGasto(21).toStringAsFixed(2)}');
-    print('Gastos varios: S/. ${calcularGasto(11).toStringAsFixed(2)}');
-    print('-------------------------------');
+  print("La bonificación del trabajador es: \$${bonificacionTotal}");
+}
+
+List<int> puntajeMinutos = [10, 8, 6, 4, 0];
+List<int> puntajeObservaciones = [10, 8, 5, 1, 0];
+
+int CalcularPuntajeMinutos(int minutos) {
+  if (minutos < 1) {
+    return puntajeMinutos[0];
+  } else if (minutos <= 2) {
+    return puntajeMinutos[1];
+  } else if (minutos <= 5) {
+    return puntajeMinutos[2];
+  } else if (minutos <= 9) {
+    return puntajeMinutos[3];
+  } else {
+    return puntajeMinutos[4];
   }
 }
 
-void main() {
-  List<Feria> ferias = [];
-  String continuar;
+int puntosObservaciones(int observaciones) {
+  if (observaciones < 1) {
+    return puntajeObservaciones[0];
+  } else if (observaciones == 1) {
+    return puntajeObservaciones[1];
+  } else if (observaciones == 2) {
+    return puntajeObservaciones[2];
+  } else if (observaciones == 3) {
+    return puntajeObservaciones[3];
+  } else {
+    return puntajeObservaciones[4];
+  }
+}
 
-  do {
-    // Solicitar el monto total de dinero a invertir en la feria
-    print('Ingrese el monto total de dinero a invertir en la feria:');
-    double montoTotal = double.parse(stdin.readLineSync()!);
+double bonificacion(int puntajeObservaciones, int puntajeMinutos) {
+  int totalPuntaje = puntajeObservaciones + puntajeMinutos;
 
-    // Crear objeto de la clase Feria y agregarlo a la lista
-    Feria feria = Feria(montoTotal);
-    ferias.add(feria);
-
-    // Preguntar si se desea agregar otra feria
-    print('¿Desea agregar otra feria? (s/n)');
-    continuar = stdin.readLineSync()!;
-  } while (continuar.toLowerCase() == 's');
-
-  // Imprimir los gastos detallados para cada feria
-  for (var feria in ferias) {
-    feria.imprimirGastos();
+  if (totalPuntaje < 11) {
+    return totalPuntaje * 2.5;
+  } else if (totalPuntaje < 13) {
+    return totalPuntaje * 5.0;
+  } else if (totalPuntaje < 16) {
+    return totalPuntaje * 7.5;
+  } else if (totalPuntaje < 19) {
+    return totalPuntaje * 10.0;
+  } else {
+    return totalPuntaje * 12.5;
   }
 }
