@@ -162,8 +162,8 @@ function showWeekContent(week) {
                     </div>
                 </div>
                 <a href="https://drive.google.com/file/d/1LyBajAliCaguhZhMX1abZZSmsJaxWWq8/view?usp=sharing" class="pdf-link" target="_blank">Ver en Drive</a>
-                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
             </div>
+            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
                 
         `; 
     } else {
