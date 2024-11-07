@@ -1,3 +1,9 @@
+/*
+Ejercicio 2: Números de Fibonacci hasta N términos
+Implementa un programa que genere la secuencia de Fibonacci hasta un número n de
+términos ingresado por el usuario. Utiliza un bucle while o for para ir generando 
+los números de la secuencia.
+*/
 import 'dart:io';
 
 void main() {
