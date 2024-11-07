@@ -41,7 +41,9 @@ function showWeekContent(week) {
             <div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana3" class="pdf-link" target="_blank">Ver en GitHub</a>
-            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            <div id="code-preview-container">
+                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            </div>
         `;
 
     } else if (week === 4) {
@@ -54,9 +56,11 @@ function showWeekContent(week) {
             <div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana4" class="pdf-link" target="_blank">Ver en GitHub</a>
-            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            <div id="code-preview-container">
+                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            </div>
         `;
-
+        
     } else if (week === 5) {
         weekDetails.innerHTML = `
             <p>Lenguaje Dart Semana 05:</p>
@@ -73,8 +77,11 @@ function showWeekContent(week) {
             </div>
             <br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana5" class="pdf-link" target="_blank">Ver en GitHub</a>
-            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            <div id="code-preview-container">
+                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            </div>
         `;
+        
     } else if (week === 6) {
         weekDetails.innerHTML = `
             <p>Lenguaje Dart Semana06:</p>
@@ -86,9 +93,11 @@ function showWeekContent(week) {
             <div>
             <br><br>
             <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana6" class="pdf-link" target="_blank">Ver en GitHub</a>
-            <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            <div id="code-preview-container">
+                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            </div>
         `;
-    
+        
     } else if (week === 7) {
             weekDetails.innerHTML = `
                 <div>
