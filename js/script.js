@@ -99,30 +99,35 @@ function showWeekContent(week) {
         `;
         
     } else if (week === 7) {
-            weekDetails.innerHTML = `
-                <div>
-                    <h2>Lenguaje Dart Semana 07:</h2>
-                    <div>
-                        <h3>Proyecto 1: Enunciados 1-3</h3>
-                        <button onclick="previewCode('tareas/semana7/along/enunciado01.dart')">Ver Enunciado 01</button>
-                        <button onclick="previewCode('tareas/semana7/along/enunciado02.dart')">Ver Enunciado 02</button>
-                        <button onclick="previewCode('tareas/semana7/along/enunciado03.dart')">Ver Enunciado 03</button>
-                        <br><br>
-                        <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7" class="pdf-link" target="_blank">Ver en GitHub</a>
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <h3>Proyecto 2: Enunciados 1-4</h3>
-                        <button onclick="previewCode('tareas/semana7/after/enunciado01.dart')">Ver Enunciado 01</button>
-                        <button onclick="previewCode('tareas/semana7/after/enunciado02.dart')">Ver Enunciado 02</button>
-                        <button onclick="previewCode('tareas/semana7/after/enunciado03.dart')">Ver Enunciado 03</button>
-                        <button onclick="previewCode('tareas/semana7/after/enunciado04.dart')">Ver Enunciado 04</button>
-                        <br><br>
-                        <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7" class="pdf-link" target="_blank">Ver en GitHub</a>
-                    </div>
+    weekDetails.innerHTML = `
+        <div>
+            <h2>Lenguaje Dart Semana 07:</h2>
+            <div style="display: flex; justify-content: space-between; gap: 20px;">
+                <div style="width: 45%;">
+                    <h3>Proyecto 1: Enunciados 1-3</h3>
+                    <button onclick="previewCode('tareas/semana7/along/enunciado01.dart')">Ver Enunciado 01</button>
+                    <button onclick="previewCode('tareas/semana7/along/enunciado02.dart')">Ver Enunciado 02</button>
+                    <button onclick="previewCode('tareas/semana7/along/enunciado03.dart')">Ver Enunciado 03</button>
+                    <br><br>
+                    <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7" class="pdf-link" target="_blank">Ver en GitHub</a>
                 </div>
-                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
-            `;
 
+                <div style="width: 45%;">
+                    <h3>Proyecto 2: Enunciados 1-4</h3>
+                    <button onclick="previewCode('tareas/semana7/after/enunciado01.dart')">Ver Enunciado 01</button>
+                    <button onclick="previewCode('tareas/semana7/after/enunciado02.dart')">Ver Enunciado 02</button>
+                    <button onclick="previewCode('tareas/semana7/after/enunciado03.dart')">Ver Enunciado 03</button>
+                    <button onclick="previewCode('tareas/semana7/after/enunciado04.dart')">Ver Enunciado 04</button>
+                    <br><br>
+                    <a href="https://github.com/Saotom3/aplicaciones-web/tree/main/tareas/semana7" class="pdf-link" target="_blank">Ver en GitHub</a>
+                </div>
+            </div>
+            <div id="code-preview-container">
+                <pre id="code-preview" style="background-color: #222; padding: 1rem; color: #fff; display: none; overflow-x: auto;"></pre>
+            </div>
+        </div>
+    `;
+    
     } else if (week === 8) {
     weekDetails.innerHTML = `
         <div>
