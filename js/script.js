@@ -150,15 +150,15 @@ function showWeekContent(week) {
                             <span class="folder-icon">📁</span> screens/
                         </div>
                         <div id="screens-folder2" class="hidden">
-                            <div class="file" onclick="previewCode('tareas/semana8/project1/area_screen.dart')">area_screen.dart</div>
-                            <div class="file" onclick="previewCode('tareas/semana8/project1/login_screen.dart')">login_screen.dart</div>
-                            <div class="file" onclick="previewCode('tareas/semana8/project1/menu_screen.dart')">menu_screen.dart</div>
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/area_screen.dart')">area_screen.dart</div>
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/login_screen.dart')">login_screen.dart</div>
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/menu_screen.dart')">menu_screen.dart</div>
                         </div>
                         <div class="folder" onclick="toggleFolder('utils-folder2')">
                             <span class="folder-icon">📁</span> utils/
                         </div>
                         <div id="utils-folder2" class="hidden">
-                            <div class="file" onclick="previewCode('tareas/semana8/project1/area_screen.dart')">calculations.dart</div>
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/calculations.dart')">calculations.dart</div>
                         </div>
                     </div>
                 </div>
