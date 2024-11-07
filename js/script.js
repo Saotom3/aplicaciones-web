@@ -101,7 +101,9 @@ function showWeekContent(week) {
     } else if (week === 7) {
     weekDetails.innerHTML = `
         <div>
-           <h4 style="text-align: center;">Lenguaje Dart Semana 07:</h4>
+            <div style="text-align: center; width: 100%;">
+                <h4>Lenguaje Dart Semana 07:</h4>
+            </div>
             <div style="display: flex; justify-content: space-between; gap: 20px;">
                 <div style="width: 45%;">
                     <p>Proyecto 1: Enunciados 1-3</p>
@@ -133,23 +135,29 @@ function showWeekContent(week) {
     } else if (week === 8) {
     weekDetails.innerHTML = `
         <div>
-            <h2>Lenguaje Dart Semana 08:</h2>
+            <p style="text-align: center;">Lenguaje Dart Semana 08:</p> 
             <br>
             <div style="display: flex; justify-content: space-between;">
                 <div style="width: 45%;">
                     <h3 onclick="toggleAccordion('project1')" style="cursor: pointer;">📁 Proyecto 1</h3>
                     <div id="project1" class="accordion-content hidden">
-                        <div class="folder" onclick="toggleFolder('lib-folder1')">
-                            <span class="folder-icon">📁</span> lib/
+                        <div class="folder" onclick="toggleFolder('lib-folder1')" style="display: flex; align-items: center;">
+                            <span class="folder-icon" style="margin-right: 5px;">📁</span> lib/
                         </div>
                         <div id="lib-folder1" class="hidden">
-                            <div class="file" onclick="previewCode('tareas/semana8/proyecto1/main.dart')">📄 main.dart</div>
-                            <div class="folder" onclick="toggleFolder('screens-folder1')">
-                                <span class="folder-icon">📁</span> screens/
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto1/main.dart')" style="display: flex; align-items: center;">
+                                <span class="file-icon" style="margin-right: 5px;">📄</span> main.dart
+                            </div>
+                            <div class="folder" onclick="toggleFolder('screens-folder1')" style="display: flex; align-items: center;">
+                                <span class="folder-icon" style="margin-right: 5px;">📁</span> screens/
                             </div>
                             <div id="screens-folder1" class="hidden">
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/splash_screen.dart')">📄 splash_screen.dart</div>
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/second_screen.dart')">📄 second_screen.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/splash_screen.dart')" style="display: flex; align-items: center;">
+                                    <span class="file-icon" style="margin-right: 5px;">📄</span> splash_screen.dart
+                                </div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto1/second_screen.dart')" style="display: flex; align-items: center;">
+                                    <span class="file-icon" style="margin-right: 5px;">📄</span> second_screen.dart
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -159,24 +167,34 @@ function showWeekContent(week) {
                 <div style="width: 45%;">
                     <h3 onclick="toggleAccordion('project2')" style="cursor: pointer;">📁 Proyecto 2</h3>
                     <div id="project2" class="accordion-content hidden">
-                        <div class="folder" onclick="toggleFolder('lib-folder2')">
-                            <span class="folder-icon">📁</span> lib/
+                        <div class="folder" onclick="toggleFolder('lib-folder2')" style="display: flex; align-items: center;">
+                            <span class="folder-icon" style="margin-right: 5px;">📁</span> lib/
                         </div>
                         <div id="lib-folder2" class="hidden">
-                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/main.dart')">📄 main.dart</div>
-                            <div class="folder" onclick="toggleFolder('screens-folder2')">
-                                <span class="folder-icon">📁</span> screens/
+                            <div class="file" onclick="previewCode('tareas/semana8/proyecto2/main.dart')" style="display: flex; align-items: center;">
+                                <span class="file-icon" style="margin-right: 5px;">📄</span> main.dart
+                            </div>
+                            <div class="folder" onclick="toggleFolder('screens-folder2')" style="display: flex; align-items: center;">
+                                <span class="folder-icon" style="margin-right: 5px;">📁</span> screens/
                             </div>
                             <div id="screens-folder2" class="hidden">
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/area_screen.dart')">📄 area_screen.dart</div>
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/login_screen.dart')">📄 login_screen.dart</div>
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/menu_screen.dart')">📄 menu_screen.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/area_screen.dart')" style="display: flex; align-items: center;">
+                                    <span class="file-icon" style="margin-right: 5px;">📄</span> area_screen.dart
+                                </div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/login_screen.dart')" style="display: flex; align-items: center;">
+                                    <span class="file-icon" style="margin-right: 5px;">📄</span> login_screen.dart
+                                </div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/menu_screen.dart')" style="display: flex; align-items: center;">
+                                    <span class="file-icon" style="margin-right: 5px;">📄</span> menu_screen.dart
+                                </div>
                             </div>
-                            <div class="folder" onclick="toggleFolder('utils-folder2')">
-                                <span class="folder-icon">📁</span> utils/
+                            <div class="folder" onclick="toggleFolder('utils-folder2')" style="display: flex; align-items: center;">
+                                <span class="folder-icon" style="margin-right: 5px;">📁</span> utils/
                             </div>
                             <div id="utils-folder2" class="hidden">
-                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/calculations.dart')">📄 calculations.dart</div>
+                                <div class="file" onclick="previewCode('tareas/semana8/proyecto2/calculations.dart')" style="display: flex; align-items: center;">
+                                    <span class="file-icon" style="margin-right: 5px;">📄</span> calculations.dart
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,6 +207,7 @@ function showWeekContent(week) {
             </div>
         </div>
     `;
+        
 } else {
         weekDetails.innerHTML = `<p>Contenido para la Semana ${week}</p>`;
     }
