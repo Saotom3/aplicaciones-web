@@ -93,7 +93,7 @@ button:hover {
 }
 
 #code-preview-container {
-    width: 45%; /* Ancho del 45% */
+    width: 55%; /* Ancho del 45% */
     margin: 0 auto; /* Centrado horizontal */
     background-color: #222;
     padding: 1rem;
