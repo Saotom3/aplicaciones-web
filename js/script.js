@@ -135,7 +135,9 @@ function showWeekContent(week) {
     } else if (week === 8) {
     weekDetails.innerHTML = `
         <div>
-            <p style="text-align: center;">Lenguaje Dart Semana 08:</p> 
+            <div style="width: 100%; text-align: center;">
+                <p>Lenguaje Dart Semana 08:</p>
+            </div>
             <br>
             <div style="display: flex; justify-content: space-between;">
                 <div style="width: 45%;">
