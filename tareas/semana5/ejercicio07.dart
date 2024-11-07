@@ -1,3 +1,9 @@
+/*
+Ejercicio 7: Matriz de espiral
+Crea un programa que imprima una matriz cuadrada de tamaño n x n en forma de 
+espiral. Utiliza bucles anidados para recorrer las posiciones de la matriz 
+en el orden adecuado.
+*/
 import 'dart:io';
 
 void main() {
