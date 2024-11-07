@@ -1,3 +1,9 @@
+/*
+Ejercicio 8: Verificación de un número Armstrong
+Escribe un programa que verifique si un número de n dígitos ingresado por el 
+usuario es un número de Armstrong (o narcisista). Utiliza un bucle for para 
+separar y elevar cada dígito a la potencia correspondiente.
+*/
 import 'dart:io';
 
 void main() {
