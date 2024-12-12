@@ -210,7 +210,17 @@ function showWeekContent(week) {
         </div>
     `;
         
-} else {
+} else if (week === 9) {
+    weekDetails.innerHTML = `
+        <p>Lenguaje Dart/Flutter Colegio Ingenieros:</p>
+        <div>
+           
+            <br><br>
+            <a href="https://goo.su/KytB6" class="pdf-link" target="_blank">Ver en GitHub</a>
+           
+        </div>
+    `;
+ }else {
         weekDetails.innerHTML = `<p>Contenido para la Semana ${week}</p>`;
     }
 
