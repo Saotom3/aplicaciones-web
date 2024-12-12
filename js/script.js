@@ -216,7 +216,7 @@ function showWeekContent(week) {
             <div>
                
                 <br><br>
-                <a href="https://goo.su/KytB6" class="pdf-link" target="_blank">Ver en GitHub</a>
+                <a href="https://goo.su/KytB6" class="pdf-link" target="_blank">Ver en Drive</a>
                
             </div>
         `;
